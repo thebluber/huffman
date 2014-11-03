@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'huffman'
+  s.name        = 'simple_huffman'
   s.version     = '0.0.0'
   s.date        = '2014-11-03'
   s.summary     = "Huffman encoder/decoder"
