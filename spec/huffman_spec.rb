@@ -34,6 +34,8 @@ describe Huffman do
   end
 
   it 'should encode a text correctly' do
+    expect(Huffman.encode('aaaaa')[:encoded_text]).to eql '00000'
+    expect(Huffman.encode('aab')[:encoded_text]).to eql '001'
     expect(Huffman.encode('abbca', {'a'=>4, 'b'=>2, 'c'=>1})[:encoded_text]).to eql '01010110'
     expect(Huffman.encode('abbca', {'a'=>3, 'b'=>2, 'c'=>1})[:encoded_text]).to eql '10000011'
     expect(Huffman.encode('abbcaa')[:encoded_text]).to eql '100000111'

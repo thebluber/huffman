@@ -46,7 +46,7 @@ class Huffman
     frequencies = get_frequencies(text) unless frequencies
     tree = build_tree(frequencies)
     code_table = {}
-    tree.traverse('', code_table)
+    frequencies.size > 1 ? tree.traverse('', code_table) : code_table = {frequencies.keys[0] => '0'}
     {encoded_text: text.chars.map{|char| code_table[char]}.join, code_table: code_table}
   end
 
